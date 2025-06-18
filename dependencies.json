@@ -1,16 +1,19 @@
 [
   {
     "name": "INPUT.DATASET",
+    "path": "Global:DATASET:INPUT.DATASET",
     "type": "DATASET",
     "dependencies": []
   },
   {
     "name": "OUTPUT.LNAME.SORTED",
+    "path": "Global:DATASET:OUTPUT.LNAME.SORTED",
     "type": "DATASET",
     "dependencies": []
   },
   {
     "name": "OUTPUT.DOB.SORTED",
+    "path": "Global:DATASET:OUTPUT.DOB.SORTED",
     "type": "DATASET",
     "dependencies": []
   },
@@ -21,12 +24,13 @@
     "dependencies": [
       {
         "name": "INPUT.DATASET",
-        "type": "INPUT.DATASET",
+        "path": "Global:DATASET:INPUT.DATASET",
+        "type": "DATASET",
         "dependencyType": "Dataset use"
       },
       {
         "name": "OUTPUT.LNAME.SORTED",
-        "path": "OUTPUT.LNAME.SORTED",
+        "path": "Global:DATASET:OUTPUT.LNAME.SORTED",
         "type": "DATASET",
         "dependencyType": "Dataset use"
       },
@@ -37,13 +41,8 @@
         "dependencyType": "Exec program"
       },
       {
-        "name": "INPUT.DATASET",
-        "type": "INPUT.DATASET",
-        "dependencyType": "Dataset use"
-      },
-      {
         "name": "OUTPUT.DOB.SORTED",
-        "path": "OUTPUT.DOB.SORTED",
+        "path": "Global:DATASET:OUTPUT.DOB.SORTED",
         "type": "DATASET",
         "dependencyType": "Dataset use"
       },
