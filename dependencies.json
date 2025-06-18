@@ -33,8 +33,8 @@
         "dependencyType": "Dataset use"
       },
       {
-        "name": "SORTDOB",
-        "path": "SORTDOB",
+        "name": "SORTALG2",
+        "path": "SORTALG2",
         "type": "COB",
         "dependencyType": "Exec program"
       }
@@ -89,5 +89,11 @@
         "dependencyType": "Copy"
       }
     ]
+  },
+  {
+    "name": "PERSON-RECORD",
+    "path": "PERSONREC",
+    "type": "CPY",
+    "dependencies": []
   }
 ]
