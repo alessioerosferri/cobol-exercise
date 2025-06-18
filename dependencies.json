@@ -1,0 +1,93 @@
+[
+  {
+    "name": "JOB",
+    "path": "JOB",
+    "type": "JCL",
+    "dependencies": [
+      {
+        "name": "INPUT.DATASET",
+        "type": "INPUT.DATASET",
+        "dependencyType": "Dataset use"
+      },
+      {
+        "name": "OUTPUT.LNAME.SORTED",
+        "path": "OUTPUT.LNAME.SORTED",
+        "type": "DATASET",
+        "dependencyType": "Dataset use"
+      },
+      {
+        "name": "SORTALG1",
+        "path": "SORTALG1",
+        "type": "COB",
+        "dependencyType": "Exec program"
+      },
+      {
+        "name": "INPUT.DATASET",
+        "type": "INPUT.DATASET",
+        "dependencyType": "Dataset use"
+      },
+      {
+        "name": "OUTPUT.DOB.SORTED",
+        "path": "OUTPUT.DOB.SORTED",
+        "type": "DATASET",
+        "dependencyType": "Dataset use"
+      },
+      {
+        "name": "SORTDOB",
+        "path": "SORTDOB",
+        "type": "COB",
+        "dependencyType": "Exec program"
+      }
+    ]
+  },
+  {
+    "name": "SORTALG1",
+    "path": "SORTALG1",
+    "type": "COB",
+    "dependencies": [
+      {
+        "name": "INFILE",
+        "path": "Global:FILE_DEFINITION:INFILE",
+        "type": "FILE_DEFINITION",
+        "dependencyType": "Close file; Open file; Read file"
+      },
+      {
+        "name": "OUTFILE",
+        "path": "Global:FILE_DEFINITION:OUTFILE",
+        "type": "FILE_DEFINITION",
+        "dependencyType": "Close file; Open file; Write file"
+      },
+      {
+        "name": "PERSON-RECORD",
+        "path": "PERSONREC",
+        "type": "CPY",
+        "dependencyType": "Copy"
+      }
+    ]
+  },
+  {
+    "name": "SORTALG2",
+    "path": "SORTALG2",
+    "type": "COB",
+    "dependencies": [
+      {
+        "name": "INFILE",
+        "path": "Global:FILE_DEFINITION:INFILE",
+        "type": "FILE_DEFINITION",
+        "dependencyType": "Close file; Open file; Read file"
+      },
+      {
+        "name": "OUTFILE",
+        "path": "Global:FILE_DEFINITION:OUTFILE",
+        "type": "FILE_DEFINITION",
+        "dependencyType": "Close file; Open file; Write file"
+      },
+      {
+        "name": "PERSON-RECORD",
+        "path": "PERSONREC",
+        "type": "CPY",
+        "dependencyType": "Copy"
+      }
+    ]
+  }
+]

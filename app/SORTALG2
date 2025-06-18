@@ -1,0 +1,28 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. SORTALG2.
+
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT INFILE ASSIGN TO 'INPUT.DATASET'.
+           SELECT OUTFILE ASSIGN TO 'OUTPUT.DOB.SORTED'.
+
+       DATA DIVISION.
+       FILE SECTION.
+       FD  INFILE.
+       COPY PERSONREC.
+
+       FD  OUTFILE.
+       COPY PERSONREC.
+
+       WORKING-STORAGE SECTION.
+       01  WS-PERSON-RECORD.
+           COPY PERSONREC.
+
+       *sorting the data by date of birth from the youngest to the oldest
+       PROCEDURE DIVISION.
+           SORT SORT-FILE
+               ON ASCENDING KEY DATE-OF-BIRTH
+               USING INFILE
+               GIVING OUTFILE.
+           STOP RUN.
