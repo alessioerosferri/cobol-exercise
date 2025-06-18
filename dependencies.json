@@ -1,5 +1,20 @@
 [
   {
+    "name": "INPUT.DATASET",
+    "type": "DATASET",
+    "dependencies": []
+  },
+  {
+    "name": "OUTPUT.LNAME.SORTED",
+    "type": "DATASET",
+    "dependencies": []
+  },
+  {
+    "name": "OUTPUT.DOB.SORTED",
+    "type": "DATASET",
+    "dependencies": []
+  },
+  {
     "name": "JOB",
     "path": "JOB",
     "type": "JCL",
